@@ -1,0 +1,131 @@
+
+ body {
+   background-color: black; 
+   /* overflow: hidden; */
+  }
+
+  @font-face {
+    font-family: 'SingleDay';
+    src: url('../assets/fonts/SingleDay-Regular.ttf') format('truetype');
+    font-weight: 0;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'RobotoThin';
+    src: url('../assets/fonts/Roboto-Regular.ttf') format('truetype');
+    font-weight: 0;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Dmsans';
+    src: url('../assets/fonts/DMSans-VariableFont_opsz\,wght.ttf') format('truetype');
+    font-weight: 0;
+    font-style: normal;
+  }
+  
+  .Reg_cont{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .Left_header{
+    font-family: 'RobotoThin', sans-serif;
+    color: white;
+    position: absolute;
+    margin-top: 40rem;
+    margin-left: 4rem;
+    font-size: 50;
+  }
+  .left_header_bottom{
+    font-family: 'RobotoThin', sans-serif;
+    color: white;
+    position: absolute;
+    margin-top: 43.5rem;
+    margin-left: 4rem;
+    font-size: 50;
+
+  }
+  .left-aligned-image {
+    float: left;
+    margin-left:-0.6em;
+    margin-top: -1rem;
+    width: 50vw;
+    height: 110vh;
+    text-align: center;
+  }
+  
+  .Reg {
+    text-align: center;
+    margin-top: 6rem;
+    margin-right: 9rem;
+    float: left;
+    width: 30vw;
+    height: 50vh;
+    margin-left: 7rem;
+  }
+  .Reg_info{
+
+    color: white;
+    margin-top: -1rem;
+    font-size: 20px;
+    font-family: 'RobotoThin';
+  }
+  
+  h1 {
+    font-family: 'SingleDay', sans-serif;
+    color: #72DB73;
+    font-size: 45px;
+  }
+  
+  p {
+    color: #7C7C7C;
+    font-size: 15px;
+    font-family: 'RobotoThin';
+  }
+  
+  .checkbox {
+    display: flex;
+    width: auto;
+    margin-left: 1.3rem;
+  }
+ 
+
+  span {
+    color: #72DB73;
+  }
+  button{
+    width: 25rem;
+    height: 2.5rem;
+    border-radius: 10px;
+    border: none;
+    background-color: #72DB73;
+    color: white;
+    font-size: 20px;
+    margin-top: 1rem;
+  }
+  input{
+    background-color: blue;
+    color: #72DB73;
+
+  }
+  form{
+    display: block;
+  }
+  label{
+    color: red;
+    margin-right: 17rem;
+    font-size: 15px;
+    margin-bottom: 0rem;
+    position: relative;
+  }
+  .form-field {
+    margin-bottom: 1rem; /* Adjust the value to control the spacing */
+  }
+  
+ 
+  
+
+  
+ 
+  
