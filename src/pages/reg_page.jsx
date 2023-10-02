@@ -185,25 +185,21 @@ function RegisterPage() {
 
 </form>
 
-
-
-        <div className="checkbox">
+      <div>
+      <div className="checkbox-cont">
         <input
             type="checkbox"
-            // onChange={(e) => {
-            //   setEmail(e.target.value);
-            //   setEmailError(false);
-            // }}
             className="checkbox"
             checked={isChecked}
             onChange={handleCheckboxChange}
           />
-          {CheckBoxError?<label>Check this box if you want to proceed</label>:"ljkljlk"}
           <p className="checkbox_text">
-            {" "}
+            {/* {" "} */}
             Share my registration data with Superapp
           </p>
         </div>
+        {CheckBoxError?<label className="checkbox_msg">Check this box if you want to proceed</label>:""}
+      </div>
 
         <button onClick={handleSubmit}>SIGN UP</button>
         <p>

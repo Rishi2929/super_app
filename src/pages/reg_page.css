@@ -85,9 +85,13 @@
   }
   
   .checkbox {
-    display: flex;
     width: auto;
     margin-left: 1.3rem;
+  }
+  .checkbox-cont {
+    display: flex;
+    margin-left: 1.3rem;
+    margin-bottom: -4rem;
   }
  
 
@@ -121,6 +125,15 @@
   }
   .form-field {
     margin-bottom: 1rem; /* Adjust the value to control the spacing */
+  }
+  .checkbox_msg{
+    color: red;
+    margin-right: rem;
+    /* margin-top: 8rem; */
+    font-size: 10px;
+  }
+  button{
+    margin-top: 5rem;
   }
   
  
