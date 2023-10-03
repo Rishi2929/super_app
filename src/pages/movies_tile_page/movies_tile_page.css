@@ -1,0 +1,65 @@
+
+body{
+    background-color: black;
+}
+@font-face {
+    font-family: 'SingleDay';
+    src: url('../../assets/fonts/SingleDay-Regular.ttf') format('truetype');
+    font-weight: 0;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'RobotoThin';
+    src: url('../../assets/fonts/Roboto-Black.ttf') format('truetype');
+    font-weight: 0;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Dmsans';
+    src: url('../../assets/fonts/DMSans-VariableFont_opsz\,wght.ttf') format('truetype');
+    font-weight: 0;
+    font-style: normal;
+  }
+  .left_cont{
+    float: left;
+    margin-left: 3rem;
+  }
+  .right_cont{
+    float: right;
+    width: 50vw;
+    margin-top: 2rem;
+  }
+  .left_header {
+    font-family: 'SingleDay', sans-serif;
+    color: #72DB73;
+    font-size: 45px;
+    margin-top: 6rem;
+    margin-bottom: 3rem;
+    font-size: 60px;
+  }
+  .left_bottom_header{
+    font-family: 'RobotoThin';
+    font-size: 60px;
+    color: white;
+  }
+  .firstRow{
+    display: flex;
+  }
+  .secondRow{
+    display: flex;
+  }
+  .ThirdRow{
+    display: flex;
+  }
+  button{
+    margin-top: 2rem;
+    margin-left: 30rem;
+    width: 8rem;
+    height: 2rem;
+    border: none;
+    border-radius: 20px;
+    background-color: #148A08;
+    color: white;
+    font-family: 'Dmsans';
+  }
+  

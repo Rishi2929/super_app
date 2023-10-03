@@ -1,14 +1,16 @@
 import './App.css';
-import Login from './pages/login';
-import RegisterPage from './pages/reg_page';
+// import RegisterPage from './pages/register_page/reg_page';
+import Movies_tile_page from './pages/movies_tile_page/movies_tile_page';
+
 
 
 
 function App() {
   return (
     <div className="App">
-      <RegisterPage/>
-    {/* <Login/> */}
+      {/* <RegisterPage/> */}
+      <Movies_tile_page/>
+
     </div>
   );
 }

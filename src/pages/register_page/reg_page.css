@@ -1,24 +1,24 @@
 
  body {
    background-color: black; 
-   /* overflow: hidden; */
+   overflow: hidden;
   }
 
   @font-face {
     font-family: 'SingleDay';
-    src: url('../assets/fonts/SingleDay-Regular.ttf') format('truetype');
+    src: url('../../assets/fonts/SingleDay-Regular.ttf') format('truetype');
     font-weight: 0;
     font-style: normal;
   }
   @font-face {
     font-family: 'RobotoThin';
-    src: url('../assets/fonts/Roboto-Regular.ttf') format('truetype');
+    src: url('../../assets/fonts/Roboto-Regular.ttf') format('truetype');
     font-weight: 0;
     font-style: normal;
   }
   @font-face {
     font-family: 'Dmsans';
-    src: url('../assets/fonts/DMSans-VariableFont_opsz\,wght.ttf') format('truetype');
+    src: url('../../assets/fonts/DMSans-VariableFont_opsz\,wght.ttf') format('truetype');
     font-weight: 0;
     font-style: normal;
   }
@@ -57,12 +57,11 @@
   
   .Reg {
     text-align: center;
-    margin-top: 6rem;
-    margin-right: 9rem;
+    margin-top: 5rem;
     float: left;
     width: 30vw;
     height: 50vh;
-    margin-left: 7rem;
+    margin-left: 10rem;
   }
   .Reg_info{
 
@@ -82,6 +81,7 @@
     color: #7C7C7C;
     font-size: 15px;
     font-family: 'RobotoThin';
+    text-align: left;
   }
   
   .checkbox {
@@ -90,8 +90,13 @@
   }
   .checkbox-cont {
     display: flex;
-    margin-left: 1.3rem;
-    margin-bottom: -4rem;
+    align-items: center;
+    margin-left: 0.6rem;
+    /* margin-bottom: -4rem; */
+  }
+  .checkbox_text{
+    margin-left: 1rem;
+    margin-bottom: 1rem;
   }
  
 
@@ -109,31 +114,38 @@
     margin-top: 1rem;
   }
   input{
-    background-color: blue;
+    border: none;
+    background-color: #292929;
     color: #72DB73;
+    border-radius: 5px;
+    width: 22rem;
+    height: 2rem;
+    outline: none;
+    padding: 10px;
 
   }
   form{
     display: block;
   }
   label{
+    position: absolute;
     color: red;
-    margin-right: 17rem;
+    margin-left: -23rem;
     font-size: 15px;
-    margin-bottom: 0rem;
-    position: relative;
+    margin-top: 3.5rem;
+
   }
   .form-field {
-    margin-bottom: 1rem; /* Adjust the value to control the spacing */
+    margin-bottom: 2rem; /* Adjust the value to control the spacing */
   }
   .checkbox_msg{
     color: red;
-    margin-right: rem;
-    /* margin-top: 8rem; */
-    font-size: 10px;
+    margin-left: -11.5rem;
+    margin-bottom: 3rem;
+    margin-top: 0rem;
   }
   button{
-    margin-top: 5rem;
+    margin-top: 2rem;
   }
   
  

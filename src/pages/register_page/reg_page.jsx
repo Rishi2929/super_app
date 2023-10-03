@@ -1,7 +1,6 @@
 import React, { useState, useRef } from "react";
-import images from "../imag_array/images";
+import images from "../../imag_array/images"
 import "./reg_page.css";
-import FormInput from "../components/Form";
 
 function RegisterPage() {
   const inputRefs = {
@@ -33,22 +32,6 @@ function RegisterPage() {
     Mobile: "",
     check: "",
   });
-
-  // const handleClick = () => {
-  //   if (isChecked) {
-  //     const inputData = {
-  //       Name: inputRefs.Name.current.value,
-  //       UserName: inputRefs.UserName.current.value,
-  //       Email: inputRefs.Email.current.value,
-  //       Mobile: inputRefs.Mobile.current.value,
-  //     };
-  //     localStorage.setItem("inputData", JSON.stringify(inputData));
-  //     console.log(localStorage.getItem("inputData"), "*****");
-  //   } else {
-  //     setCheckBoxError(true);
-
-  //   }
-  // };
 
   const handleCheckboxChange = (e) => {
     setIsChecked(e.target.checked);
@@ -193,6 +176,7 @@ function RegisterPage() {
             checked={isChecked}
             onChange={handleCheckboxChange}
           />
+          {/* <input type="checkbox"/> */}
           <p className="checkbox_text">
             {/* {" "} */}
             Share my registration data with Superapp
