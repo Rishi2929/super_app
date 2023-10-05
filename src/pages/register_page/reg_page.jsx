@@ -1,6 +1,8 @@
 import React, { useState, useRef } from "react";
 import images from "../../imag_array/images"
 import "./reg_page.css";
+import { Link } from 'react-router-dom';
+
 
 function RegisterPage() {
   const inputRefs = {
@@ -95,6 +97,8 @@ function RegisterPage() {
   const handleSubmit = (e) => {
     e.preventDefault();
     validateInputs();
+    <Link to="/movies"></Link>
+
 
     // if (isChecked) {
     //   handleClick();
