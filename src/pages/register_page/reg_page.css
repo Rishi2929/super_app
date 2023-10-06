@@ -57,18 +57,19 @@
   
   .Reg {
     text-align: center;
-    margin-top: 5rem;
+    margin-top: 2rem;
     float: left;
     width: 30vw;
     height: 50vh;
     margin-left: 10rem;
   }
   .Reg_info{
-
     color: white;
     margin-top: -1rem;
+    margin-bottom: 3rem;
     font-size: 20px;
     font-family: 'RobotoThin';
+    text-align: center;
   }
   
   h1 {
@@ -78,12 +79,14 @@
   }
   
   p {
-    color: #7C7C7C;
     font-size: 15px;
     font-family: 'RobotoThin';
-    text-align: left;
+
+    color: #7C7C7C;
   }
-  
+  .termsandcond{
+    margin-left: 9rem;
+  }
   .checkbox {
     width: auto;
     margin-left: 1.3rem;
@@ -97,6 +100,7 @@
   .checkbox_text{
     margin-left: 1rem;
     margin-bottom: 1rem;
+
   }
  
 
@@ -140,16 +144,22 @@
   }
   .checkbox_msg{
     color: red;
-    margin-left: -11.5rem;
+    margin-left: -11.7rem;
     margin-bottom: 3rem;
-    margin-top: 0rem;
+    margin-top:-0.5rem;
   }
   button{
     margin-top: 2rem;
   }
   
  
-  
+  .text-cont{
+    height: 10rem;
+    width: 30rem;
+    margin-top: 42rem;
+    margin-left: 55.5rem;
+    position: absolute;
+  }
 
   
  

@@ -194,6 +194,9 @@ function RegisterPage() {
       </div>
 
         <button onClick={handleSubmit}>SIGN UP</button>
+      
+      </div>
+      <div className="text-cont">
         <p>
           By clicking on Sign up. you agree to Superapp{" "}
           <span>
@@ -209,7 +212,7 @@ function RegisterPage() {
             <br /> Policy
           </span>
         </p>
-      </div>
+        </div>
     </div>
   );
 }

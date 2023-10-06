@@ -31,7 +31,7 @@ function Movies_tile_page() {
     <div className="genreRows">
       {selectedGenre.map((genre, index) => (
         <div className="genreTile" key={index}>
-          <p>{genre}</p>
+          <p className="genre_text">{genre}</p>
           <button className="Xbtn"  onClick={() => unselectGenre(genre)} >X</button>
         </div>
       ))}

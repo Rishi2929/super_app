@@ -19,6 +19,7 @@ function App() {
         <Route path='/category' index element={<Movies_tile_page/>}/>
       </Routes>
       </BrowserRouter>
+
     </div>
 
   );
