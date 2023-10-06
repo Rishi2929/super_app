@@ -1,7 +1,9 @@
 import React, { useState, useRef } from "react";
 import images from "../../imag_array/images"
 import "./reg_page.css";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
+
 
 
 function RegisterPage() {
@@ -12,6 +14,13 @@ function RegisterPage() {
     Mobile: useRef(),
   };
 
+  // const history = useHistory();
+  const navigate = useNavigate();
+
+  const handleButtonClick = () => {
+    // Navigate to the Movies_tile_page
+    navigate('/category');
+  };
   const [Name, setName] = useState("");
   const [UserName, setUserName] = useState("");
   const [Email, setEmail] = useState("");
@@ -88,6 +97,7 @@ function RegisterPage() {
         Email: inputRefs.Email.current.value,
         Mobile: inputRefs.Mobile.current.value,
       };
+      handleButtonClick();
       localStorage.setItem("inputData", JSON.stringify(inputData));
       console.log(localStorage.getItem("inputData"), "*****");
     }
@@ -97,12 +107,6 @@ function RegisterPage() {
   const handleSubmit = (e) => {
     e.preventDefault();
     validateInputs();
-    <Link to="/movies"></Link>
-
-
-    // if (isChecked) {
-    //   handleClick();
-    // }
   };
 
   return (

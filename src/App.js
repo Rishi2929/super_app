@@ -15,12 +15,10 @@ function App() {
 
       <BrowserRouter>
       <Routes>
-        <Route index element={<RegisterPage/>}/>
-
+        <Route path='/' index element={<RegisterPage/>}/>
+        <Route path='/category' index element={<Movies_tile_page/>}/>
       </Routes>
       </BrowserRouter>
-      {/* <Movies_tile_page/> */}
-
     </div>
 
   );
