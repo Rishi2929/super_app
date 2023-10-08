@@ -1,0 +1,29 @@
+@font-face {
+    font-family: 'Dmsans';
+    src: url('../../assets/fonts/DMSans-VariableFont_opsz,wght.ttf') format('truetype');
+  }
+  
+  .movie_tile {
+    background-color: orange;
+    height: 12rem;
+    width: 12rem;
+    border-radius: 15px;
+    margin-right: 20px;
+    margin-top: 20px;
+    padding-top: 1px;
+  
+    img {
+      width: 11rem;
+      margin-top: 1.1rem;
+      margin-left: 0.6rem;
+    }
+  
+    .text {
+      margin-left: 1rem;
+      font-family: 'Dmsans';
+      color: white;
+      font-size: 20px;
+      font-weight: 500;
+    }
+  }
+  

@@ -1,16 +1,15 @@
 import React from 'react'
-import './Widget.css'
+import './Widget.scss'
 import images from '../../imag_array/images'
 
 
 function Widget({imageSrc,color,genre,onClick,selected}) {
   const widgetStyle = {
     backgroundColor: color,
-    border: selected ? '5px transparent #11B800' : 'none', 
   };
   if (selected) {
     // Change the border color if selected
-    widgetStyle.border = `5px solid #11B800 `;
+    widgetStyle.outline = `5px solid #11B800 `;
   }
   return (
     <div>

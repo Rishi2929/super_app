@@ -1,12 +1,12 @@
 import React, { useState, useRef } from "react";
 import images from "../../imag_array/images"
-import "./reg_page.css";
+import "./reg_page.scss";
 import { Link, useNavigate } from 'react-router-dom';
-import { useHistory } from 'react-router-dom';
 
 
 
 function RegisterPage() {
+  
   const inputRefs = {
     Name: useRef(),
     UserName: useRef(),
@@ -14,7 +14,7 @@ function RegisterPage() {
     Mobile: useRef(),
   };
 
-  // const history = useHistory();
+
   const navigate = useNavigate();
 
   const handleButtonClick = () => {
@@ -99,7 +99,7 @@ function RegisterPage() {
       };
       handleButtonClick();
       localStorage.setItem("inputData", JSON.stringify(inputData));
-      console.log(localStorage.getItem("inputData"), "*****");
+
     }
   };
   

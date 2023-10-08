@@ -1,0 +1,31 @@
+.weather_info {
+    display: flex;
+    padding-bottom: 0rem;
+    justify-content: space-between;
+  
+    .weather_icon {
+      width: 110px;
+      height: 110px;
+      margin-left: 3rem;
+    }
+  
+    .weather_text {
+      margin-left: 2rem;
+      margin-top: 8rem;
+      margin-left: -6rem;
+      color: black;
+    }
+  
+    .line {
+      width: 1px;
+      height: 4rem;
+      background-color: white;
+      margin-top: 2rem;
+    }
+  
+    .secondRow {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  

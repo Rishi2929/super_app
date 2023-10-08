@@ -8,7 +8,7 @@ import img7 from '../assets/image 8.png';
 import img8 from '../assets/image 9.png';
 import img9 from '../assets/image 10.png';
 import img10 from '../assets/image 11.png';
-
+import img11 from '../assets/image 14.png'
 
 
 
@@ -22,5 +22,6 @@ export default {
     img7,
     img8,
     img9,
-    img10
+    img10,
+    img11
 };

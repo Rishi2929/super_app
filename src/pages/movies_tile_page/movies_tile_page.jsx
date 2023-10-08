@@ -1,20 +1,40 @@
-import {React,useState} from "react";
-import "./movies_tile_page.css";
+import {React,useState,useEffect} from "react";
+import "./movies_tile_page.scss";
 import Widget from "../../components/Widget/Widget";
 import images from "../../imag_array/images";
+import { Link, useNavigate } from 'react-router-dom';
+
 
 function Movies_tile_page() {
-    const [selectedGenre, setSelectedGenre] = useState([]);
-    const [errorMessage, setErrorMessage] = useState("");
+    //Navigation
+    const navigate = useNavigate();
+    const handleButtonClick1 = () => {
+      navigate('/profile');
+    };
 
-      
+    const [selectedGenre, setSelectedGenre] = useState([]);
+
+
+    useEffect(() => {
+      const savedGenres = localStorage.getItem("selectedGenres");
+      if (savedGenres) {
+        setSelectedGenre(JSON.parse(savedGenres));
+      }
+    }, []);
+
+    useEffect(() => {
+      localStorage.setItem("selectedGenres", JSON.stringify(selectedGenre));
+    }, [selectedGenre]);
+  
+
+
+      console.log(selectedGenre)
     const handleTileClick = (genre) => {
             if(!selectedGenre.includes(genre)){
                 setSelectedGenre([...selectedGenre,genre]);
             }
         };
-
-        
+      console.log()
         const unselectGenre = (genre) => {
             const updatedGenreList = selectedGenre.filter((selected) => selected !== genre);
             setSelectedGenre(updatedGenreList);
@@ -60,7 +80,7 @@ function Movies_tile_page() {
         <Widget imageSrc={images.img10} color="#6CD061" genre={"Fiction"} onClick={() => handleTileClick("Fiction")} selected={selectedGenre.includes("Fiction")}/>
        </div>
 
-       <button className="btn" >Next Page</button>
+       <button className="btn" onClick={handleButtonClick1} >Next Page</button>
 
       </div>
     </div>

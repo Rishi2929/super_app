@@ -1,35 +1,29 @@
 
- body {
-   background-color: black; 
-   overflow: hidden;
-  }
+@font-face {
+  font-family: 'SingleDay';
+  src: url('../../assets/fonts/SingleDay-Regular.ttf') format('truetype');
+  font-weight: 0;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'RobotoThin';
+  src: url('../../assets/fonts/Roboto-Regular.ttf') format('truetype');
+  font-weight: 0;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Dmsans';
+  src: url('../../assets/fonts/DMSans-VariableFont_opsz\,wght.ttf') format('truetype');
+  font-weight: 0;
+  font-style: normal;
+}
 
-  @font-face {
-    font-family: 'SingleDay';
-    src: url('../../assets/fonts/SingleDay-Regular.ttf') format('truetype');
-    font-weight: 0;
-    font-style: normal;
-  }
-  @font-face {
-    font-family: 'RobotoThin';
-    src: url('../../assets/fonts/Roboto-Regular.ttf') format('truetype');
-    font-weight: 0;
-    font-style: normal;
-  }
-  @font-face {
-    font-family: 'Dmsans';
-    src: url('../../assets/fonts/DMSans-VariableFont_opsz\,wght.ttf') format('truetype');
-    font-weight: 0;
-    font-style: normal;
-  }
-  
-  .Reg_cont{
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-  }
-  
-  .Left_header{
+.Reg_cont {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+
+  .Left_header {
     font-family: 'RobotoThin', sans-serif;
     color: white;
     position: absolute;
@@ -37,33 +31,35 @@
     margin-left: 4rem;
     font-size: 50;
   }
-  .left_header_bottom{
+
+  .left_header_bottom {
     font-family: 'RobotoThin', sans-serif;
     color: white;
     position: absolute;
     margin-top: 43.5rem;
     margin-left: 4rem;
     font-size: 50;
-
   }
+
   .left-aligned-image {
     float: left;
-    margin-left:-0.6em;
+    margin-left: -0.6em;
     margin-top: -1rem;
     width: 50vw;
     height: 110vh;
     text-align: center;
   }
-  
-  .Reg {
-    text-align: center;
-    margin-top: 2rem;
-    float: left;
-    width: 30vw;
-    height: 50vh;
-    margin-left: 10rem;
-  }
-  .Reg_info{
+}
+
+.Reg {
+  text-align: center;
+  margin-top: 2rem;
+  float: left;
+  width: 30vw;
+  height: 50vh;
+  margin-left: 10rem;
+
+  .Reg_info {
     color: white;
     margin-top: -1rem;
     margin-bottom: 3rem;
@@ -71,43 +67,44 @@
     font-family: 'RobotoThin';
     text-align: center;
   }
-  
+
   h1 {
     font-family: 'SingleDay', sans-serif;
     color: #72DB73;
     font-size: 45px;
   }
-  
+
   p {
     font-size: 15px;
     font-family: 'RobotoThin';
-
     color: #7C7C7C;
   }
-  .termsandcond{
+
+  .termsandcond {
     margin-left: 9rem;
   }
+
   .checkbox {
     width: auto;
     margin-left: 1.3rem;
   }
+
   .checkbox-cont {
     display: flex;
     align-items: center;
     margin-left: 0.6rem;
-    /* margin-bottom: -4rem; */
   }
-  .checkbox_text{
+
+  .checkbox_text {
     margin-left: 1rem;
     margin-bottom: 1rem;
-
   }
- 
 
   span {
     color: #72DB73;
   }
-  button{
+
+  button {
     width: 25rem;
     height: 2.5rem;
     border-radius: 10px;
@@ -117,7 +114,8 @@
     font-size: 20px;
     margin-top: 1rem;
   }
-  input{
+
+  input {
     border: none;
     background-color: #292929;
     color: #72DB73;
@@ -126,41 +124,45 @@
     height: 2rem;
     outline: none;
     padding: 10px;
-
   }
-  form{
+
+  form {
     display: block;
   }
-  label{
+
+  label {
     position: absolute;
     color: red;
     margin-left: -23rem;
     font-size: 15px;
     margin-top: 3.5rem;
-
   }
+
   .form-field {
     margin-bottom: 2rem; /* Adjust the value to control the spacing */
   }
-  .checkbox_msg{
+
+  .checkbox_msg {
     color: red;
     margin-left: -11.7rem;
     margin-bottom: 3rem;
-    margin-top:-0.5rem;
-  }
-  button{
-    margin-top: 2rem;
-  }
-  
- 
-  .text-cont{
-    height: 10rem;
-    width: 30rem;
-    margin-top: 42rem;
-    margin-left: 55.5rem;
-    position: absolute;
+    margin-top: -0.5rem;
   }
 
-  
- 
-  
+  button {
+    margin-top: 2rem;
+  }
+}
+
+.text-cont {
+  height: 10rem;
+  width: 30rem;
+  margin-top: 42rem;
+  margin-left: 55.5rem;
+  position: absolute;
+  p{
+    color: #7C7C7C;
+    font-family: 'RobotoThin';
+
+  }
+}

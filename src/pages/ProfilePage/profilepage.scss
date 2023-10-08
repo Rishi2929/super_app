@@ -1,0 +1,89 @@
+$font-family-roboto-thin: 'RobotoThin';
+
+  
+  .top_elements {
+    display: flex;
+  
+    .Profile_card {
+      width: 50vw;
+      height: 50vh;
+      background-color: #5746EA;
+      border-radius: 20px;
+      margin-left: 4rem;
+      margin-top: 3rem;
+      padding-top: 2rem;
+      padding-left: 2rem;
+      display: flex;
+
+      img{
+        height: 45vh;
+      }
+      .user_card{
+        padding-left: 4rem;
+        .user_details{
+          background-color: green;
+          .para{
+            font-size: 30px;
+            color: white;
+            font-family: 'RobotoThin';
+            margin-bottom: 5px;
+          }
+        }
+      }
+  
+     
+      .user_genre {
+        height: 7rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Two columns */
+        grid-gap: 10px; /* Adjust the gap between elements as needed */
+        overflow: auto; 
+      }
+      
+      .user_genre p {
+        width: 5rem;
+        text-align: center;
+        padding: 10px; 
+        margin-bottom: -15px;
+        border-radius: 20px;
+        background-color: #9F94FF;
+        color: white;
+        font-family: 'RobotoThin';
+      }
+      
+    }
+  
+    .weather_card {
+      margin-top: 4rem;
+      width: 52vw;
+      height: 30vh;
+      background-color: #101744;
+      border-radius: 20px;
+      margin-left: 4rem;
+  
+      .rect {
+        width: 52vw;
+        height: 10vh;
+        background-color: #FF4ADE;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+      }
+    }
+  
+    .news_card {
+      width: 30vw;
+      height: 90vh;
+      background-color: white;
+      margin-left: 4rem;
+      margin-top: 3rem;
+      border-radius: 20px;
+    }
+    // .transparent_cont{
+    //   background-color: rgba(0, 0, 0, 0.5);
+    //   width: 30vw;
+    //   height: 10vh;
+    //   position: absolute;
+    //   margin-top: 15.5rem;
+    // }
+  }
+  
