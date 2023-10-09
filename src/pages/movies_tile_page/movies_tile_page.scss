@@ -89,6 +89,17 @@ $font-family-roboto-thin: 'RobotoThin';
         }
       }
     }
+    .error-box{
+      display: flex;
+      align-items: center;
+    }
+    img{
+      width: 2vw;
+      height: 3vh;
+    }
+    p{
+      margin-left: 1vw;
+    }
   }
 
   .genre_text {

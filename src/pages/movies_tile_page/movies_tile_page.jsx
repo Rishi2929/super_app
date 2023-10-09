@@ -17,12 +17,6 @@ function Movies_tile_page() {
     const [selectedGenre, setSelectedGenre] = useState([]);
 
 
-    useEffect(() => {
-      const savedGenres = localStorage.getItem("selectedGenres");
-      if (savedGenres) {
-        setSelectedGenre(JSON.parse(savedGenres));
-      }
-    }, []);
 
     useEffect(() => {
       localStorage.setItem("selectedGenres", JSON.stringify(selectedGenre));
@@ -59,9 +53,15 @@ function Movies_tile_page() {
       ))}
     </div>
   )}
-  {
-    selectedGenre.length<3&& <p style={{color:"red"}}>Error</p>
-  }
+{
+  selectedGenre.length < 3 && (
+    <div className="error-box">
+      <img src={images.img15} alt="Error Image" />
+      <p style={{ color: "red" }}>Minimum 3 category required</p>
+      
+    </div>
+  )
+}
 </div>
 
 

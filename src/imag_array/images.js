@@ -12,6 +12,8 @@ import img11 from '../assets/image 14.png';
 import img12 from '../assets/Group.png';
 import img13 from '../assets/Vector (1).png';
 import img14 from '../assets/Vector (2).png';
+import img15 from '../assets/Vector (3).png';
+
 
 
 
@@ -29,5 +31,6 @@ export default {
     img11,
     img12,
     img13,
-    img14
+    img14,
+    img15
 };
