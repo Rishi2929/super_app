@@ -49,7 +49,19 @@ const NewsApi = () => {
           <button onClick={nextArticle}>Next Article</button>
         </div>
       ) : (
-        <p>Loading...</p>
+        <p>Loading
+          {/* <div>
+          <div className='news_cont'>
+
+            <div className="transparent-div">
+
+            </div>
+
+        
+          </div>
+          <button onClick={nextArticle}>Next Article</button>
+        </div> */}
+        </p>
       )}
     </div>
   );

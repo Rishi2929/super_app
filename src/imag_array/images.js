@@ -8,7 +8,10 @@ import img7 from '../assets/image 8.png';
 import img8 from '../assets/image 9.png';
 import img9 from '../assets/image 10.png';
 import img10 from '../assets/image 11.png';
-import img11 from '../assets/image 14.png'
+import img11 from '../assets/image 14.png';
+import img12 from '../assets/Group.png';
+import img13 from '../assets/Vector (1).png';
+import img14 from '../assets/Vector (2).png';
 
 
 
@@ -23,5 +26,8 @@ export default {
     img8,
     img9,
     img10,
-    img11
+    img11,
+    img12,
+    img13,
+    img14
 };

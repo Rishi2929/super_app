@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './Time_api.css'
+import './Time_api.scss'
 
 const TimeApi = () => {
   const [weatherData, setWeatherData] = useState(null);
@@ -24,13 +24,13 @@ const TimeApi = () => {
 
     fetchData();
   }, [apiUrl]);
-  // console.log(weatherData.location.localtime);
+  console.log(weatherData);
 
   return (
     
     <div>
       {weatherData ? (
-        <div>
+        <div className='time_cont'>
             <p className='weather_text'>{weatherData.location.localtime}</p>
         </div>
       ) : (

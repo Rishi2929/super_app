@@ -21,7 +21,8 @@ $font-family-roboto-thin: 'RobotoThin';
       .user_card{
         padding-left: 4rem;
         .user_details{
-          background-color: green;
+
+          margin-bottom: 3rem;
           .para{
             font-size: 30px;
             color: white;
@@ -41,9 +42,9 @@ $font-family-roboto-thin: 'RobotoThin';
       }
       
       .user_genre p {
-        width: 5rem;
-        text-align: center;
+        width: 10rem;
         padding: 10px; 
+        padding-left: 20px;
         margin-bottom: -15px;
         border-radius: 20px;
         background-color: #9F94FF;
@@ -67,6 +68,11 @@ $font-family-roboto-thin: 'RobotoThin';
         background-color: #FF4ADE;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
+        .time_div{
+          align-items: center;
+          margin-left: 10rem;
+        }
+
       }
     }
   

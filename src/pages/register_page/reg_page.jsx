@@ -99,10 +99,11 @@ function RegisterPage() {
       };
       handleButtonClick();
       localStorage.setItem("inputData", JSON.stringify(inputData));
+      // console.log(inputData)
+
 
     }
   };
-  
 
   const handleSubmit = (e) => {
     e.preventDefault();

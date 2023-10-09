@@ -1,3 +1,7 @@
+$font-family-single-day: 'SingleDay';
+$font-family-roboto-bold: 'RobotoBold';
+$font-family-dmsans: 'Dmsans';
+$font-family-roboto-thin: 'RobotoThin';
 .weather_info {
     display: flex;
     padding-bottom: 0rem;
@@ -10,15 +14,15 @@
     }
   
     .weather_text {
-      margin-left: 2rem;
-      margin-top: 8rem;
-      margin-left: -6rem;
-      color: black;
+      margin-left: 4.1rem;
+      margin-top: -1rem;
+      align-items: center;
+
     }
   
     .line {
-      width: 1px;
-      height: 4rem;
+      width: 2px;
+      height: 5rem;
       background-color: white;
       margin-top: 2rem;
     }
@@ -26,6 +30,63 @@
     .secondRow {
       display: flex;
       flex-direction: column;
+      .temp{
+        font-size: 60px;
+        margin-top: 1rem;
+      }
+      .Pressure_cont{
+        display: flex;
+        margin-top: -3rem;
+        img{
+          height: 35px;
+          width: 20px;
+          margin-left: 1rem;
+        }
+        .wind{
+          font-size: 15px;
+          margin-left: 1rem;
+          margin-top: -0.2rem;
+          text-align: center;
+        }
+      }
+   
+    
     }
+    p{
+      color: white;
+      font-family: 'RobotoThin';
+      font-size: 25px;
+    }
+
+    .wind_Cont{
+      display: flex;
+      margin-right: 3rem;
+      img{
+        width: 35px;
+        height: 29px;
+        margin-top: 1.7rem;
+        margin-right: 1rem;
+      }
+      p{
+        font-size: 20px;
+      }
+    }
+    .humidity_cont{
+      display: flex;
+      align-items: center;
+    }
+    img{
+      width: 20px;
+      height: 40px;
+      margin-right: 1rem;
+    }
+    .humidity_text{
+      margin-left: 1rem;
+      font-size: 20px;
+
+
+
+    }
+
   }
   

@@ -1,25 +1,42 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import './profilepage.scss'
 
 import images from '../../imag_array/images'
 import Weather_Api from '../../components/weather_api/weather_api'
 import Time_Api from '../../components/Time_api/Time_api';
 import News_api from '../../components/news_api/News_api';
+import { useLocation } from 'react-router-dom';
+
 
 
 
 function ProfilePage() {
   const storedData = localStorage.getItem("inputData");
   const parsedData = JSON.parse(storedData);
+  const location = useLocation();
+  const selectedGenresFromstate = location.state ? JSON.parse(location.state.selectedGenres) : [];
+
+  const [selectedGenres, setSelectedGenres] = useState([]);
+
 
 
   const [Name, setName] = useState(parsedData.Name || "");
 const [UserName, setUserName] = useState(parsedData.UserName || "");
 const [Email, setEmail] = useState(parsedData.Email || "");
-const [Mobile, setMobile] = useState(parsedData.Mobile || "");
+// const [Mobile, setMobile] = useState(parsedData.Mobile || "");
 
 
-  console.log(storedData)
+useEffect(() => {
+  const savedGenres = localStorage.getItem("selectedGenres");
+  if (savedGenres) {
+    setSelectedGenres(JSON.parse(savedGenres));
+  }
+}, []);
+
+
+
+
+  // console.log(storedData)
   return (
     <div>
       <div className='top_elements'>
@@ -35,19 +52,15 @@ const [Mobile, setMobile] = useState(parsedData.Mobile || "");
        <p className='para'>{Name}</p> 
           <p className='para'>{Email}</p> 
           <p className='para'>{UserName}</p> 
-       </div>
-          {/* User Genre which will be displayed from local storage */}
-          <div className='user_genre'>
-           <p>jdskjdskl</p>
-            <p>jdskjdskl</p>
-            <p>jdskjdskl</p>
-            <p>jdskjdskl</p>
-             <p>jdskjdskl</p>
-            <p>jdskjdskl</p>
-            <p>jdskjdskl</p>
-            <p>jdskjdskl</p>
+                    {/* User Genre which will be displayed from local storage */}
 
-          </div>
+          <div className='user_genre'>
+                  {selectedGenresFromstate.map((genre, index) => (
+                    <p key={index}>{genre}</p>
+                  ))}
+                </div>
+       </div>
+      
         </div>
 
         </div>
@@ -56,10 +69,10 @@ const [Mobile, setMobile] = useState(parsedData.Mobile || "");
 
       <div className='weather_card'>
         <div className='rect'>
+          <div className='time_div'>
           <Time_Api/>
 
-
-
+          </div>
         </div>
         <Weather_Api/>
 

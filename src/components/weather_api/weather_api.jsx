@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './weather_api.scss'
+import images from '../../imag_array/images'
+
 
 const Weather_Api = () => {
   const [weatherData, setWeatherData] = useState(null);
@@ -24,6 +26,7 @@ const Weather_Api = () => {
 
     fetchData();
   }, [apiUrl]);
+  console.log(weatherData)
 
   return (
     <div>
@@ -39,21 +42,35 @@ const Weather_Api = () => {
               <div className='line'></div>
 
             <div className='secondRow'>
-            <p> {weatherData.current.temp_c}°C</p>
-            <p>{weatherData.current.pressure_mb} mbbar</p>
+            <p className='temp'>  {weatherData.current.temp_c}°C</p>
+            
+            <div className='Pressure_cont'>
+              <img src={images.img13}></img>
+            <p className='wind'>{weatherData.current.pressure_mb} mbbar<br/>Pressure</p>
+            </div>
+
               </div>
 
               <div className='line'></div>
 
                 <div className='thirdRow'>
-                  <p>{weatherData.current.wind_mph} km/h</p>
+
+                  <div className='wind_Cont'>
+                    <img src={images.img14}></img>
+                  <p>{weatherData.current.wind_mph} km/h<br/>Wind</p>
+                  </div>
+                  <div className='humidity_cont'>
+                  <img src={images.img12}></img>
+                  <p className='humidity_text'>{weatherData.current.humidity}%<br/>humidity</p>
+                  </div>
+
 
                 </div>
 
              </div>
         </div>
       ) : (
-        <p>Loading...</p>
+        <p>fdjlkdjldjlkjdfljsdkl</p>
       )}
     </div>
   );

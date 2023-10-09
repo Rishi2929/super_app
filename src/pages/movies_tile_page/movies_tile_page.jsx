@@ -8,9 +8,11 @@ import { Link, useNavigate } from 'react-router-dom';
 function Movies_tile_page() {
     //Navigation
     const navigate = useNavigate();
-    const handleButtonClick1 = () => {
-      navigate('/profile');
-    };
+
+   const handleButtonClick1 = () => {
+  const genresToSave = JSON.stringify(selectedGenre);
+  navigate('/profile', { state: { selectedGenres: genresToSave } });
+};
 
     const [selectedGenre, setSelectedGenre] = useState([]);
 
