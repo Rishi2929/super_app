@@ -59,7 +59,11 @@ function Movies_tile_page() {
       ))}
     </div>
   )}
+  {
+    selectedGenre.length<3&& <p style={{color:"red"}}>Error</p>
+  }
 </div>
+
 
 
 

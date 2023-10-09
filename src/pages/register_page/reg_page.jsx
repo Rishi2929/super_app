@@ -110,6 +110,7 @@ function RegisterPage() {
     validateInputs();
   };
 
+
   return (
     <div className="Reg_cont">
       <div>

@@ -5,8 +5,8 @@ import images from '../../imag_array/images'
 
 const Weather_Api = () => {
   const [weatherData, setWeatherData] = useState(null);
-  const apiKey = '1f9432895d7247f9b3794037230710';
-  const apiUrl = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=London&aqi=no`;
+  const apiKey = 'baa0d173f09b4e6ab8e141436230910';
+  const apiUrl = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=London&aqi=no`;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -23,10 +23,16 @@ const Weather_Api = () => {
         console.error('Error fetching weather data:', error);
       }
     };
-
     fetchData();
-  }, [apiUrl]);
-  console.log(weatherData)
+
+  }, []);
+  
+  // useEffect(()=>{
+  //   console.log("seocnd")
+  //   console.log(weatherData)
+
+
+  // },[]);
 
   return (
     <div>

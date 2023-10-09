@@ -1,12 +1,12 @@
 $font-family-roboto-thin: 'RobotoThin';
 
-  
+
   .top_elements {
     display: flex;
   
     .Profile_card {
-      width: 50vw;
-      height: 50vh;
+      width: 40vw;
+      height: 26vh;
       background-color: #5746EA;
       border-radius: 20px;
       margin-left: 4rem;
@@ -16,33 +16,39 @@ $font-family-roboto-thin: 'RobotoThin';
       display: flex;
 
       img{
-        height: 45vh;
+        height: 25vh;
+        margin-top: -1rem;
       }
       .user_card{
         padding-left: 4rem;
         .user_details{
-
-          margin-bottom: 3rem;
+          margin-top: -1rem;
+          // margin-bottom: 3rem;
+          padding-bottom: 1rem;
           .para{
-            font-size: 30px;
+            font-size: 20px;
             color: white;
             font-family: 'RobotoThin';
-            margin-bottom: 5px;
+            margin: 0.9vh;
+
           }
         }
       }
   
      
       .user_genre {
-        height: 7rem;
+        height: 6em;
         display: grid;
         grid-template-columns: repeat(2, 1fr); /* Two columns */
         grid-gap: 10px; /* Adjust the gap between elements as needed */
         overflow: auto; 
+        margin-right: 9rem;
+
+
       }
       
       .user_genre p {
-        width: 10rem;
+        width: 8rem;
         padding: 10px; 
         padding-left: 20px;
         margin-bottom: -15px;
@@ -50,35 +56,48 @@ $font-family-roboto-thin: 'RobotoThin';
         background-color: #9F94FF;
         color: white;
         font-family: 'RobotoThin';
+        margin-top: 0;
+        margin-bottom: 5px;
       }
-      
+
+      .try{
+        width: 25vw;
+        height: 25vh;
+        position: absolute;
+        background-color: yellow;
+        margin-left: 25rem;
+      }
     }
   
     .weather_card {
-      margin-top: 4rem;
-      width: 52vw;
-      height: 30vh;
+      margin-top: -1rem;
+      width: 42vw;
+      height: 20vh;
       background-color: #101744;
       border-radius: 20px;
       margin-left: 4rem;
   
       .rect {
-        width: 52vw;
-        height: 10vh;
+        width: 42vw;
+        height: 5vh;
         background-color: #FF4ADE;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
         .time_div{
           align-items: center;
           margin-left: 10rem;
+          p{
+            color: white;
+            font-size: 30px;
+          }
         }
 
       }
     }
   
     .news_card {
-      width: 30vw;
-      height: 90vh;
+      width: 25vw;
+      height: 80vh;
       background-color: white;
       margin-left: 4rem;
       margin-top: 3rem;
@@ -93,3 +112,12 @@ $font-family-roboto-thin: 'RobotoThin';
     // }
   }
   
+  .flex-profile-weather-notes{
+
+    display: flex;
+  }.flex{
+    display: flex;
+
+ 
+    
+  }

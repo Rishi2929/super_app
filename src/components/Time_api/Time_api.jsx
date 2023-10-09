@@ -4,7 +4,7 @@ import './Time_api.scss'
 const TimeApi = () => {
   const [weatherData, setWeatherData] = useState(null);
   const apiKey = '1f9432895d7247f9b3794037230710';
-  const apiUrl = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=London&aqi=no`;
+  const apiUrl = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=London&aqi=no`;
 
   useEffect(() => {
     const fetchData = async () => {
