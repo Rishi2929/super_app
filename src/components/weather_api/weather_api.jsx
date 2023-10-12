@@ -69,7 +69,9 @@ const Weather_Api = () => {
              </div>
         </div>
       ) : (
-        <p>fdjlkdjldjlkjdfljsdkl</p>
+        <div>
+
+          </div>
       )}
     </div>
   );

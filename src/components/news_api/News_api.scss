@@ -10,6 +10,7 @@ $font-family-roboto-thin: 'RobotoThin';
   width: 20vw;
 
 
+
     img{
         width: 25vw;
       height: 40vh;
@@ -24,8 +25,8 @@ $font-family-roboto-thin: 'RobotoThin';
       color: white; 
       margin-top: 0rem;
       width:25vw;
-      height: 14vh;
-      margin-top: -14.8vh;
+      height: 8vh;
+      margin-top: -8.8vh;
       position: absolute;
   
       h1{
@@ -43,26 +44,69 @@ $font-family-roboto-thin: 'RobotoThin';
 
 
     }
+    .news-content-text-box{
+      padding: 20px;
+
+    }
     .news-content-text {
       overflow: visible;
       white-space: normal;
       text-overflow: initial;
       width: 24vw;
-      padding: 15px;
-      font-size: 20px;
+      font-size: 15px;
       font-family: 'RobotoExtranThin';
       letter-spacing: 1px;
       word-spacing: 5px;
-      /* Remove ellipsis (...) to show the full content */
+
+
     }
     
 }
+.dummy_news_cont {
+  height: 40vh;
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+  
+  img{
+    width: 25vw;
+    height: 40vh;
+    border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  }
+  .dummy_transparent-div{
+    background-color: rgba(0, 0, 0, 0.5); /* Black color with 50% transparency */
+    padding: 1px;
+    color: white; 
+    margin-top: 0rem;
+    width:25vw;
+    height: 8vh;
+    margin-top: -8.8vh;
+    position: absolute;
+  }
+  .dummy_news-content-text-box{
+    padding: 20px;
+    .dummy-rect-flex{
+      display: flex;
+      justify-content: space-evenly;
+    }
+    .rect1{
+      width: 10vw;
+      height: 1vh;
+      background-color: #F3F0E8;
+    }
+    .rect2{
+      width: 5vw;
+      height: 1vh;
+      background-color: #F3F0E8;
+    }
+    .rect3{
+      width: 3vw;
+      height: 1vh;
+      background-color: #F3F0E8;
+    
 
-.next_btn{
-  width: 9vw;
-  height: 3vh;
-  border-radius: 10px;
-  border: none;
-  background-color: #ffe9e3;
-  color: #685454;
+    }
+  }
 }
+
+

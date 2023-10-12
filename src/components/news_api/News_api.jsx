@@ -12,7 +12,6 @@ const NewsApi = () => {
   const fetchData = async () => {
     try {
       const response = await fetch(apiUrl);
-      console.log("first")
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
@@ -30,7 +29,7 @@ const NewsApi = () => {
     fetchData();
   }, []);
 
- 
+
   // console.log(newsData)
 
   return (
@@ -43,28 +42,81 @@ const NewsApi = () => {
             <div className="transparent-div">
               <h1>{newsData[currentIndex].title}</h1>
             </div>
+            <div className='news-content-text-box' >
+              <p className="news-content-text">{newsData[currentIndex].description} {newsData[currentIndex].content}</p>
 
-            <p className="news-content-text">{newsData[currentIndex].description} {newsData[currentIndex].content}</p>
-            {/* <a href={newsData[currentIndex].url} target="_blank" rel="noopener noreferrer">
-              Read More
-            </a> */}
+            </div>
           </div>
 
         </div>
       ) : (
-        <p>Loading
-          {/* <div>
-          <div className='news_cont'>
+        <div>
+          <div className='dummy_news_cont'>
+            <img src='https://placehold.jp/eeeeee/cccccc/350x150.png?text=No%20Image'></img>
+            <div className="dummy_transparent-div">
 
-            <div className="transparent-div">
+            </div>
+            <div className='dummy_news-content-text-box' >
+            <div className='dummy-rect-flex'>
+            <div className='rect1'></div>
+              <div className='rect2'></div>
+              <div className='rect3'></div>
+              <div className='rect3'></div>
+              </div>
 
             </div>
 
-        
+            <div className='dummy_news-content-text-box' >
+            <div className='dummy-rect-flex'>
+            <div className='rect1'></div>
+              <div className='rect2'></div>
+              <div className='rect3'></div>
+              <div className='rect3'></div>
+              </div>
+
+            </div>
+
+            <div className='dummy_news-content-text-box' >
+            <div className='dummy-rect-flex'>
+            <div className='rect1'></div>
+              <div className='rect2'></div>
+              <div className='rect3'></div>
+              <div className='rect3'></div>
+              </div>
+
+            </div>
+            <div className='dummy_news-content-text-box' >
+            <div className='dummy-rect-flex'>
+            <div className='rect1'></div>
+              <div className='rect2'></div>
+              <div className='rect3'></div>
+              <div className='rect3'></div>
+              </div>
+
+            </div>
+
+            <div className='dummy_news-content-text-box' >
+            <div className='dummy-rect-flex'>
+            <div className='rect1'></div>
+              <div className='rect2'></div>
+              <div className='rect3'></div>
+              <div className='rect3'></div>
+              </div>
+
+            </div>
+
+            <div className='dummy_news-content-text-box' >
+            <div className='dummy-rect-flex'>
+            <div className='rect1'></div>
+              <div className='rect2'></div>
+              <div className='rect3'></div>
+              <div className='rect3'></div>
+              </div>
+
+            </div>
           </div>
-          <button onClick={nextArticle}>Next Article</button>
-        </div> */}
-        </p>
+
+        </div>
       )}
     </div>
   );
