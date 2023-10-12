@@ -4,6 +4,7 @@ import RegisterPage from './pages/register_page/reg_page';
 import Movies_tile_page from './pages/movies_tile_page/movies_tile_page';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import ProfilePage from './pages/ProfilePage/ProfilePage';
+import Entertain_page from './pages/entertaimentPage/Entertain_page';
 
 
 
@@ -19,6 +20,8 @@ function App() {
         <Route path='/' index element={<RegisterPage/>}/>
         <Route path='/category' index element={<Movies_tile_page/>}/>
         <Route path='/profile' element={<ProfilePage/>}></Route>
+        <Route path='/entertainment' element={<Entertain_page/>}></Route>
+
       </Routes>
       </BrowserRouter> 
       {/* <ProfilePage/> */}

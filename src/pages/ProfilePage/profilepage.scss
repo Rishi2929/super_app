@@ -6,7 +6,7 @@ $font-family-roboto-thin: 'RobotoThin';
   
     .Profile_card {
       width: 40vw;
-      height: 26vh;
+      height: 24vh;
       background-color: #5746EA;
       border-radius: 20px;
       margin-left: 4rem;
@@ -70,7 +70,7 @@ $font-family-roboto-thin: 'RobotoThin';
     }
   
     .weather_card {
-      margin-top: -1rem;
+      margin-top: -1.5rem;
       width: 42vw;
       height: 20vh;
       background-color: #101744;
@@ -84,11 +84,21 @@ $font-family-roboto-thin: 'RobotoThin';
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
         .time_div{
+          
           align-items: center;
-          margin-left: 10rem;
+          margin-left: 1rem;
+          .date{
+            margin-left: 4rem;
+          }
+          .time{
+            margin-right: 5rem;
+          }
           p{
             color: white;
-            font-size: 30px;
+            font-size: 32px;
+            display: flex;
+            justify-content: space-between;
+            
           }
         }
 
@@ -103,21 +113,54 @@ $font-family-roboto-thin: 'RobotoThin';
       margin-top: 3rem;
       border-radius: 20px;
     }
-    // .transparent_cont{
-    //   background-color: rgba(0, 0, 0, 0.5);
-    //   width: 30vw;
-    //   height: 10vh;
-    //   position: absolute;
-    //   margin-top: 15.5rem;
-    // }
+    .time-cont{
+      width: 63vw;
+      height: 28vh;
+      background-color: #1E2343;
+      margin-left: 4rem;
+      border-radius: 10px;
+      margin-top: 1rem;
+    }
+    .flex-profile-weather-notes{
+
+      display: flex;
+    }.flex{
+      display: flex;
+      .note-box{
+        width: 20vw;
+        height: 49vh;
+        background-color: #F1C75B;
+        border-radius: 20px;
+        margin-left: 1rem;
+        margin-top: 3rem;
+
+        h1{
+          font-family: 'RobotoThin';
+          margin-left: 4rem;
+        }
+        .note-content{
+          height:35vh;
+          border: none;
+          outline: none;
+          padding-left: 30px;
+          padding-right: 20px;
+          overflow: auto;
+        }
+    }
+    }
   }
   
-  .flex-profile-weather-notes{
-
-    display: flex;
-  }.flex{
-    display: flex;
-
  
-    
+
+  .browse-btn{
+    width: 7rem;
+    height: 2rem;
+    border-radius: 15px;
+    border: none;
+    margin-left: 89vw;
+    color: white;
+    background-color: #148A08;
+    font-size: 20px;
   }
+ 
+

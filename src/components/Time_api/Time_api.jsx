@@ -1,43 +1,43 @@
-import React, { useEffect, useState } from 'react';
-import './Time_api.scss'
+// Timer.js
+import React, { useState, useEffect } from "react";
+import CircularWheel from "../Circularwheel/Circularwheel";
 
-const TimeApi = () => {
-  const [weatherData, setWeatherData] = useState(null);
-  const apiKey = '1f9432895d7247f9b3794037230710';
-  const apiUrl = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=London&aqi=no`;
+
+const TimerComp = () => {
+  const [time, setTime] = useState(10); // Initial time in seconds
+  const [hoursRotation, setHoursRotation] = useState(0);
+  const [minutesRotation, setMinutesRotation] = useState(0);
+  const [secondsRotation, setSecondsRotation] = useState(0);
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(apiUrl);
+    if (time > 0) {
+      const timerInterval = setInterval(() => {
+        const h = Math.floor(time / 3600);
+        const m = Math.floor((time % 3600) / 60);
+        const s = time % 60;
+        
+        setHoursRotation(h * (360 / 12)); // Assuming 12 segments for hours
+        setMinutesRotation(m * (360 / 60));
+        setSecondsRotation(s * (360 / 60));
+        setTime(time - 1);
+      }, 1000);
 
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-
-        const jsonData = await response.json();
-        setWeatherData(jsonData);
-      } catch (error) {
-        console.error('Error fetching weather data:', error);
-      }
-    };
-
-    fetchData();
-  }, [apiUrl]);
-  console.log(weatherData);
+      return () => clearInterval(timerInterval);
+    }
+  }, [time]);
 
   return (
-    
-    <div>
-      {weatherData ? (
-        <div className='time_cont'>
-            <p className='weather_text'>{weatherData.location.localtime}</p>
-        </div>
-      ) : (
-        <p>Loading...</p>
-      )}
+    <div className="timer">
+      <CircularWheel
+        hoursRotation={hoursRotation}
+        minutesRotation={minutesRotation}
+        secondsRotation={secondsRotation}
+      />
+      <div className="timer-display">
+        {`${Math.floor(time / 3600).toString().padStart(2, "0")}:${Math.floor((time % 3600) / 60).toString().padStart(2, "0")}:${(time % 60).toString().padStart(2, "0")}`}
+      </div>
     </div>
   );
 };
 
-export default TimeApi;
+export default TimerComp;

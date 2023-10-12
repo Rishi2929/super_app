@@ -16,13 +16,10 @@ function Movies_tile_page() {
 
     const [selectedGenre, setSelectedGenre] = useState([]);
 
-
-
     useEffect(() => {
       localStorage.setItem("selectedGenres", JSON.stringify(selectedGenre));
     }, [selectedGenre]);
   
-
 
       console.log(selectedGenre)
     const handleTileClick = (genre) => {
