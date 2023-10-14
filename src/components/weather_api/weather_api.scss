@@ -13,16 +13,23 @@ $font-family-roboto-thin: 'RobotoThin';
       margin-left: 3rem;
     }
   
+    .firstRow{
+      text-align: center;
+
+    }
     .weather_text {
-      margin-left:5.3vw ;
-      margin-top: -1rem;
-      align-items: center;
+      // display: flex;
+      margin-left:5vw ;
+      margin-top: -1.5rem;
+      width: 4rem;
+
+
 
     }
   
     .line {
       width: 2px;
-      height: 5rem;
+      height: 4rem;
       background-color: white;
       margin-top: 2rem;
     }
@@ -31,26 +38,24 @@ $font-family-roboto-thin: 'RobotoThin';
       display: flex;
       flex-direction: column;
       .temp{
-        font-size: 50px;
-        margin-top: 1rem;
+        font-size: 40px;
+        margin-top: 0.5rem;
       }
       .Pressure_cont{
         display: flex;
-        margin-top: -3rem;
+        margin-top: -1rem;
         img{
           height: 25px;
           width: 15px;
           margin-left: 1rem;
         }
-        .wind{
-          font-size: 15px;
+        .pressure{
+          font-size: 12px;
           margin-left:0rem;
           margin-top: -0.2rem;
-
         }
       }
-   
-    
+
     }
     p{
       color: white;
@@ -68,13 +73,14 @@ $font-family-roboto-thin: 'RobotoThin';
         margin-right: 1rem;
       }
       p{
-        font-size: 15px;
+        font-size: 12px;
 
       }
     }
     .humidity_cont{
       display: flex;
       align-items: center;
+      margin-top: 1rem;
     }
     img{
       width: 20px;
@@ -83,7 +89,7 @@ $font-family-roboto-thin: 'RobotoThin';
     }
     .humidity_text{
       margin-left: 1rem;
-      font-size: 15px;
+      font-size: 12px;
 
 
 

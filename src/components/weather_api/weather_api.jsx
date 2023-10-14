@@ -26,7 +26,7 @@ const Weather_Api = () => {
     fetchData();
 
   }, []);
-
+console.log(weatherData)
   return (
     <div>
       {weatherData ? (
@@ -45,7 +45,7 @@ const Weather_Api = () => {
             
             <div className='Pressure_cont'>
               <img src={images.img13}></img>
-            <p className='wind'>{weatherData.current.pressure_mb} mbbar<br/>Pressure</p>
+            <p className='pressure'>{weatherData.current.pressure_mb} mbbar<br/>Pressure</p>
             </div>
 
               </div>

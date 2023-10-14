@@ -3,21 +3,24 @@ import "./profilepage.scss";
 
 import images from "../../imag_array/images";
 import Weather_Api from "../../components/weather_api/weather_api";
-import Time_Api from "../../components/Time_api/Time_api";
+import Time_Api from "../../components/TimerComp/Time_api";
 import News_api from "../../components/news_api/News_api";
 import { useLocation, useNavigate } from "react-router-dom";
-import TimerComp from "../../components/Time_api/Time_api";
+import TimerComp from "../../components/TimerComp/Time_api";
 
 function ProfilePage() {
   const navigate = useNavigate();
+  const location = useLocation();
+
   const directToEntertianPage = () => {
     navigate("/entertainment");
   };
 
-  const location = useLocation();
-  const selectedGenresFromstate = location.state
-    ? JSON.parse(location.state.selectedGenres)
-    : [];
+  
+
+  // const selectedGenresFromstate = location.state
+  //   ? JSON.parse(location.state.selectedGenres)
+  //   : [];
 
   const [selectedGenres, setSelectedGenres] = useState([]);
 
@@ -27,9 +30,19 @@ function ProfilePage() {
     const storedData = localStorage.getItem("inputData");
     const parsedData = JSON.parse(storedData);
     setUserData(parsedData);
+  console.log(selectedGenres)
+
   }, []);
 
-  console.log("userData: ", userData);
+
+  // console.log("userData: ", userData);
+// console.log(selectedGenres)
+  // useEffect(() => {
+  //   const savedGenres = localStorage.getItem("selectedGenres");
+  //   if (savedGenres) {
+  //     setSelectedGenres(JSON.parse(savedGenres));
+  //   }
+  // }, []);
 
   useEffect(() => {
     const savedGenres = localStorage.getItem("selectedGenres");
@@ -37,7 +50,6 @@ function ProfilePage() {
       setSelectedGenres(JSON.parse(savedGenres));
     }
   }, []);
-
   const now = new Date();
 
   const year = now.getFullYear();
@@ -82,7 +94,7 @@ function ProfilePage() {
                     {/* User Genre which will be displayed from local storage */}
 
                     <div className="user_genre">
-                      {selectedGenresFromstate.map((genre, index) => (
+                      {selectedGenres.map((genre, index) => (
                         <p key={index}>{genre}</p>
                       ))}
                     </div>

@@ -1,3 +1,16 @@
+$font-family-single-day: 'SingleDay';
+
 .img_btn{
-    margin-left: 90vw;
+    display: flex;
+    img{
+        width: auto;
+        height: auto;
+        margin-left: 80vw;
+
+    }
+    h1{
+        color: #72DB73;
+        font-family: 'SingleDay';
+        margin-left: 2rem;
+    }
 }
