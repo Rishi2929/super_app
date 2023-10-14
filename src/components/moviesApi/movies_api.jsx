@@ -33,8 +33,8 @@ const YourComponent = () => {
         // Handle any errors here
       });
   }, []);
-  console.log(selectedGenres)
-  console.log(movieData);
+  // console.log(selectedGenres)
+  // console.log(movieData);
 
 
   const FilteredMoviesbyAction = () => {
@@ -320,50 +320,6 @@ const YourComponent = () => {
     );
   };
 
-
-  // console.log(FilteredMoviesbyFiction());
-
-  // const FilteredMoviesbyGenre = ({ genreName }) => {
-  //   return (
-  //     <>
-  //       {movieData ? (
-  //         <div>
-  //           <h1>{genreName}</h1>
-  //           <ul>
-  //             {movieData
-  //               .filter((movie) => selectedGenres.includes(genreName)) 
-  //               .slice(0, 4)
-  //               .map((movie) => (
-  //                 <div key={movie.id}>
-  //                   <div className='movie_data'>
-  //                     <img
-  //                       src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
-  //                       alt={movie.title}
-  //                       className='movie_img'
-  //                     />
-  //                   </div>
-  //                 </div>
-  //               ))}
-  //           </ul>
-  //         </div>
-  //       ) : (
-  //         <p>Loading...</p>
-  //       )}
-  //     </>
-  //   );
-  // };
-
-  // console.log(movieData)
-  // console.log(selectedGenres)
-
-
-
-  const b = ["action", "romance", "thriller"];
-
-  // Example: Convert each string to uppercase
-  const mappedArray = b.map(item => item.toUpperCase());
-
-  console.log(mappedArray);
 
   return (
     <div className='flex_movie_tiles'>
