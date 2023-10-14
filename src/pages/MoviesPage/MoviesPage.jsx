@@ -5,7 +5,7 @@ import images from "../../imag_array/images";
 import { Link, useNavigate } from 'react-router-dom';
 
 
-function Movies_tile_page() {
+function MoviesPage() {
   //Navigation
   const navigate = useNavigate();
 
@@ -90,4 +90,4 @@ function Movies_tile_page() {
   );
 }
 
-export default Movies_tile_page;
+export default MoviesPage;
