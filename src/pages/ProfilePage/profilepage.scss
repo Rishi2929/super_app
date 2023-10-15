@@ -1,4 +1,6 @@
 $font-family-roboto-thin: 'RobotoThin';
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Roboto:wght@400;500;700;900&family=Single+Day&display=swap');
+
 
 @font-face {
   font-family: 'RobotoExtranThin';
@@ -120,9 +122,10 @@ $font-family-roboto-thin: 'RobotoThin';
       border-radius: 20px;
     }
     .time-cont{
-      width: 64.3vw;
-      height: 28vh;
-      background-color: #1E2343;
+      // width: 4.3vw;
+      height: 27vh;
+      // background-color: #1E2343;
+      // background: #fff;
       margin-left: 4rem;
       border-radius: 10px;
       margin-top: 2rem;
@@ -139,6 +142,7 @@ $font-family-roboto-thin: 'RobotoThin';
         border-radius: 20px;
         margin-left: 2rem;
         margin-top: 3rem;
+        font-family: 'Roboto';
 
         h1{
           font-family: 'RobotoThin';
@@ -151,7 +155,9 @@ $font-family-roboto-thin: 'RobotoThin';
           padding-left: 40px;
           padding-right: 80px;
           overflow: auto;
-          font-family: 'RobotoExtranThin';
+          letter-spacing: 2px;
+          font-family: 'Roboto', 'DM-Sans', 'Single Day', sans-serif;
+
         }
     }
     }

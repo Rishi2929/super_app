@@ -26,7 +26,7 @@ const Weather_Api = () => {
     fetchData();
 
   }, []);
-console.log(weatherData)
+
   return (
     <div>
       {weatherData ? (

@@ -5,7 +5,7 @@ import MoviesPage from './pages/MoviesPage/MoviesPage';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import ProfilePage from './pages/ProfilePage/ProfilePage';
 import Entertain_page from './pages/entertaimentPage/Entertain_page';
-import Movies_tile_page from './pages/MoviesPage/MoviesPage';
+
 
 
 

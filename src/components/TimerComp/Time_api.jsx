@@ -1,98 +1,172 @@
 import React, { useState, useEffect } from "react";
-import "./Time_api.scss";
-import { CountdownCircleTimer } from "react-countdown-circle-timer";
 
-const Timer = (props) => {
+
+import "./Time_api.scss";
+import { BiSolidUpArrow } from "react-icons/bi";
+import { BiSolidDownArrow } from "react-icons/bi";
+import { FaHandHoldingMedical } from "react-icons/fa";
+import ring from '../../assets/audio/alarm-ring.mp3';
+
+
+const Timer_api = (props) => {
   const [hour, setHour] = useState(0);
   const [minute, setMinute] = useState(0);
   const [second, setSecond] = useState(0);
-  const [totalSeconds, setTotalSeconds] = useState(0);
-  const [intervalStore, setIntervalStore] = useState(null);
-  const [isTimerPlaying, setIsTimerPlaying] = useState(false);
-
   const [remTime, setRemTime] = useState("00:00:00");
+  const [intervalStore, setIntervalStore] = useState(null);
+  const [audioStore, setAudioStore] = useState(null);
 
-  useEffect(() => {
-    const seconds = hour * 3600 + minute * 60 + second;
-    setTotalSeconds(seconds);
-    setRemTime(formatTime(seconds));
-  }, [hour, minute, second]);
 
-  const formatTime = (time) => {
-    const hours = Math.floor(time / 3600);
-    const minutes = Math.floor((time % 3600) / 60);
-    const seconds = time % 60;
-    return `${String(hours).padStart(2, "0")}:${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
-  };
+  let totalSeconds = (hour*3600) + (minute*60) + second;
+
+
+  // console.log(hour, minute, second);
+
+
+  const toStr = (num) => {
+    return String(num).padStart(2, "0");
+  }
+
+
+  const calculateTime = () => {
+    // console.log("inside setInterval");
+    let remHour = Math.floor( totalSeconds / (60 * 60) );
+    let remMin = Math.floor( totalSeconds / 60 );
+    remMin = remMin % 60;
+    let remSec = totalSeconds % 60;
+
+
+    //now converting remaining hour, minute and seconds to string and storing in RemTime
+    if(totalSeconds >= 0)
+    setRemTime(`${toStr(remHour)}:${toStr(remMin)}:${toStr(remSec)}`);
+    // totalSeconds--;
+  }
+
 
   const handleStartClick = () => {
-    if (isTimerPlaying) {
-      clearInterval(intervalStore);
-      setIsTimerPlaying(false);
-    } else {
-      const intervalId = setInterval(() => {
-        setTotalSeconds((prevSeconds) => prevSeconds - 1);
-        setRemTime(formatTime(totalSeconds - 1));
-      }, 1000);
-      setIntervalStore(intervalId);
-      setIsTimerPlaying(true);
+    if(totalSeconds <= 0) return;
+    calculateTime();
+    if(audioStore) {
+      console.log("inside clear audio");
+      clearInterval(audioStore);
     }
-  };
+
+
+    if(intervalStore) {
+      console.log("inside clearInterval");
+      clearInterval(intervalStore);
+    }
+
+
+    const animationName = `anim-${Date.now()}`;
+    const style = document.createElement('style');
+    document.head.appendChild(style);
+
+
+    style.sheet.insertRule(`
+      @keyframes ${animationName} {
+        100% {
+          stroke-dashoffset: 0;
+        }
+      }
+    `, 0);
+
+
+    document.querySelector('svg circle:nth-child(2)').style.animation = `${animationName} ${totalSeconds+1}s linear forwards`;
+
+
+    let intervalId = setInterval(() => {
+      if(totalSeconds <= 0) {
+        clearInterval(intervalId);
+        let audio = new Audio(ring);
+       
+        audio.play();
+       
+        let audioTimeoutId = setTimeout(() => {
+          audio.pause(); // Pause the audio after 2 seconds
+        }, 3000);
+
+
+        setAudioStore(audioTimeoutId);
+      }
+      totalSeconds--;
+      calculateTime();
+
+
+    }, 1000)
+
+
+    // console.log("end handleClick")
+    setIntervalStore(intervalId);
+  }
+
+
+
+
+  // console.log("remTime: ", remTime);
+  // console.log("interval outside: ", intervalStore);
+  // console.log("total secs: ", totalSeconds);
+  // console.log("audio interval store: ", audioStore);
+
 
   return (
     <div className={`${props.className} timer-container`}>
       <div className="left-side">
-        <CountdownCircleTimer
-          isPlaying={isTimerPlaying}
-          duration={totalSeconds}
-          colors={[["#004777", 0.33], ["#F7B801", 0.33], ["#A30000"]]}
-        >
-          {({ remainingTime }) => formatTime(remainingTime)}
-        </CountdownCircleTimer>
+        <div className="circle">
+            <p>{remTime}</p>
+            <svg>
+              <circle cx="70" cy="70" r="70"></circle>
+              <circle cx="70" cy="70" r="70" style={{}}></circle>
+            </svg>
+        </div>
       </div>
+
 
       <div className="right-side">
         <div className="input-time">
-        <div className="input-time-data">
+          <div className="input-time-data">
             <h4>Hours</h4>
             <button onClick={() => setHour(hour + 1)}>
-              {/* <BiSolidUpArrow/> */}
+              <BiSolidUpArrow />
             </button>
             <p>{String(hour).padStart(2, "0")}</p>
             <button onClick={() => hour > 0 && setHour(hour - 1)}>
-              {/* <BiSolidDownArrow /> */}
+              <BiSolidDownArrow />
             </button>
           </div>
           <div className="colons">:</div>
           <div className="input-time-data">
             <h4>Minutes</h4>
             <button onClick={() => setMinute(minute + 1)}>
-              {/* <BiSolidUpArrow /> */}
+              <BiSolidUpArrow />
             </button>
             <p>{String(minute).padStart(2, "0")}</p>
             <button onClick={() => minute > 0 && setMinute(minute - 1)}>
-              {/* <BiSolidDownArrow /> */}
+              <BiSolidDownArrow />
             </button>
           </div>
           <div className="colons">:</div>
           <div className="input-time-data">
             <h4>Seconds</h4>
             <button onClick={() => setSecond(second + 1)}>
-              {/* <BiSolidUpArrow /> */}
+              <BiSolidUpArrow />
             </button>
             <p>{String(second).padStart(2, "0")}</p>
             <button onClick={() => second > 0 && setSecond(second - 1)}>
-              {/* <BiSolidDownArrow /> */}
+              <BiSolidDownArrow />
             </button>
           </div>
-
         </div>
-        <button className="start-btn" onClick={handleStartClick}>
-          {isTimerPlaying ? "Pause" : "Start"}
-        </button>
+
+
+        <button className="start-btn" onClick={handleStartClick}>Start</button>
       </div>
     </div>
   );
 };
 
-export default Timer;
+
+export default Timer_api;
+
+
+

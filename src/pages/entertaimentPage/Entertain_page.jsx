@@ -11,12 +11,10 @@ function Entertain_page() {
     navigate('/profile');
   }
   return (
-    <div>
+    <div className='entertainment-cont'>
       <div className='img_btn'>
       <h1>Super app</h1>
       <img src={images.img16} onClick={handleButtonClickToProfilePage}></img>
-
-
       </div>
       <MoviesApi/>
 

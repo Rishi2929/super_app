@@ -7,6 +7,8 @@ import Time_Api from "../../components/TimerComp/Time_api";
 import News_api from "../../components/news_api/News_api";
 import { useLocation, useNavigate } from "react-router-dom";
 import TimerComp from "../../components/TimerComp/Time_api";
+import Timer from "../../components/TimerComp/Time_api";
+import Timer_api from "../../components/TimerComp/Time_api";
 
 function ProfilePage() {
   const navigate = useNavigate();
@@ -123,7 +125,7 @@ function ProfilePage() {
             </div>
           </div>
           <div className="time-cont">
-            <TimerComp />
+            <Timer_api />
           </div>
         </div>
 

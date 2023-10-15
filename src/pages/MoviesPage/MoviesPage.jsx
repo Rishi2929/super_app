@@ -11,6 +11,7 @@ function MoviesPage() {
 
   const handleButtonClick1 = () => {
     const genresToSave = JSON.stringify(selectedGenre);
+    if(selectedGenre.length>=3)
     navigate('/profile', { state: { selectedGenres: genresToSave } });
   };
 
@@ -21,7 +22,7 @@ function MoviesPage() {
   }, [selectedGenre]);
 
 
-  console.log(selectedGenre)
+  // console.log(selectedGenre)
   const handleTileClick = (genre) => {
     if (!selectedGenre.includes(genre)) {
       setSelectedGenre([...selectedGenre, genre]);
