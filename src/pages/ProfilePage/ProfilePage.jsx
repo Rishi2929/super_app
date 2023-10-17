@@ -47,7 +47,7 @@ function ProfilePage() {
     if (savedGenres) {
       setSelectedGenres(JSON.parse(savedGenres));
     }
-  }, [selectedGenres]);
+  }, []);
   const now = new Date();
 
   const year = now.getFullYear();
