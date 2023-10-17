@@ -41,8 +41,18 @@ const YourComponent = () => {
       const data7 = await fetchData(148);
       const data8 = await fetchData(160);
 
+      const mergedData = [
+        ...data1,
+        ...data2,
+        ...data3,
+        ...data4,
+        ...data5,
+        ...data6,
+        ...data7,
+        ...data8,
+      ];
 
-      setMovieData([...data1, ...data2,...data3,...data4,...data5,...data6,...data7,...data8]);
+      setMovieData(mergedData);
     }
     fetchDataAsync();
   }, []);
@@ -121,7 +131,7 @@ const YourComponent = () => {
             <ul>
               {movieData
                 ?.filter((movie) => movie.genre_ids.includes(10749))
-                .slice(0, 4) // Limits the display to the first four movies
+                .slice(5, 9) // Limits the display to the first four movies
                 .map((movie) => (
                   <div key={movie.id}>
                     <div className='movie_data'>
