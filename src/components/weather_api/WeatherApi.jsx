@@ -55,7 +55,7 @@ const WeatherApi = () => {
                 <div className='thirdRow'>
 
                   <div className='wind_Cont'>
-                    <img src={images.img14}></img>
+                    <img src={images.img14} alt=''></img>
                   <p>{weatherData.current.wind_mph} km/h<br/>Wind</p>
                   </div>
                   <div className='humidity_cont'>

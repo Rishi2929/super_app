@@ -30,7 +30,7 @@ function ProfilePage() {
     setUserData(parsedData);
   console.log(selectedGenres)
 
-  }, []);
+  }, [selectedGenres]);
 
 
   // console.log("userData: ", userData);
