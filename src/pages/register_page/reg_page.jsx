@@ -115,7 +115,7 @@ function RegisterPage() {
     <div className="Reg_cont">
       <div>
         <img src={images.img1} className="left-aligned-image" alt="" />
-        <h1 className="Left_header">Discover new things on </h1>
+        <h1 className="Left_header">Testing real time deployment </h1>
         <h1 className="left_header_bottom">Superapp</h1>
       </div>
       <div className="Reg">
