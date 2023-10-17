@@ -3,7 +3,7 @@ import './News_api.scss';
 
 const NewsApi = () => {
   const [newsData, setNewsData] = useState([]);
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex] = useState(0);
   const apiKey = '028c1646a8c34752a674035ebd007759';
 
   const apiUrl = `https://newsapi.org/v2/top-headlines?country=us&-news&apiKey=${apiKey}`;
@@ -27,7 +27,7 @@ const NewsApi = () => {
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [fetchData]);
 
 
   // console.log(newsData)
@@ -52,7 +52,7 @@ const NewsApi = () => {
       ) : (
         <div>
           <div className='dummy_news_cont'>
-            <img src='https://placehold.jp/eeeeee/cccccc/350x150.png?text=No%20Image'></img>
+            <img src='https://placehold.jp/eeeeee/cccccc/350x150.png?text=No%20Image'alt='image2'></img>
             <div className="dummy_transparent-div">
 
             </div>

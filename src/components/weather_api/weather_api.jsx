@@ -25,7 +25,7 @@ const Weather_Api = () => {
     };
     fetchData();
 
-  }, []);
+  }, [apiUrl]);
 
   return (
     <div>
@@ -34,7 +34,7 @@ const Weather_Api = () => {
             <div className='weather_info'>
            
             <div className='firstRow'> 
-                 <img src={weatherData.current.condition.icon} className='weather_icon'/> 
+                 <img src={weatherData.current.condition.icon} alt='image4' className='weather_icon'/> 
                 <p className='weather_text'>{weatherData.current.condition.text}</p>
             </div>
 
@@ -44,7 +44,7 @@ const Weather_Api = () => {
             <p className='temp'>  {weatherData.current.temp_c}°C</p>
             
             <div className='Pressure_cont'>
-              <img src={images.img13}></img>
+              <img src={images.img13} alt='image5'></img>
             <p className='pressure'>{weatherData.current.pressure_mb} mbbar<br/>Pressure</p>
             </div>
 
@@ -59,7 +59,7 @@ const Weather_Api = () => {
                   <p>{weatherData.current.wind_mph} km/h<br/>Wind</p>
                   </div>
                   <div className='humidity_cont'>
-                  <img src={images.img12}></img>
+                  <img src={images.img12} alt='image3'></img>
                   <p className='humidity_text'>{weatherData.current.humidity}%<br/>humidity</p>
                   </div>
 

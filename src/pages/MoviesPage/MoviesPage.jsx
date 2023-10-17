@@ -2,7 +2,7 @@ import { React, useState, useEffect } from "react";
 import "./movies_tile_page.scss";
 import Widget from "../../components/Widget/Widget";
 import images from "../../imag_array/images";
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
 function MoviesPage() {
@@ -54,7 +54,7 @@ function MoviesPage() {
           {
             selectedGenre.length < 3 && (
               <div className="error-box">
-                <img src={images.img15} alt="Error Image" />
+                <img src={images.img15} alt="Error" />
                 <p style={{ color: "red" }}>Minimum 3 category required</p>
 
               </div>

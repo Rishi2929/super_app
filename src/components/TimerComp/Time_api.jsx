@@ -1,14 +1,11 @@
-import React, { useState, useEffect } from "react";
-
-
+import React, { useState } from "react";
 import "./Time_api.scss";
 import { BiSolidUpArrow } from "react-icons/bi";
 import { BiSolidDownArrow } from "react-icons/bi";
-import { FaHandHoldingMedical } from "react-icons/fa";
 import ring from '../../assets/audio/alarm-ring.mp3';
 
 
-const Timer_api = (props) => {
+const TimerApi = (props) => {
   const [hour, setHour] = useState(0);
   const [minute, setMinute] = useState(0);
   const [second, setSecond] = useState(0);
@@ -20,23 +17,19 @@ const Timer_api = (props) => {
   let totalSeconds = (hour*3600) + (minute*60) + second;
 
 
-  // console.log(hour, minute, second);
-
-
   const toStr = (num) => {
     return String(num).padStart(2, "0");
   }
 
 
   const calculateTime = () => {
-    // console.log("inside setInterval");
+
     let remHour = Math.floor( totalSeconds / (60 * 60) );
     let remMin = Math.floor( totalSeconds / 60 );
     remMin = remMin % 60;
     let remSec = totalSeconds % 60;
 
 
-    //now converting remaining hour, minute and seconds to string and storing in RemTime
     if(totalSeconds >= 0)
     setRemTime(`${toStr(remHour)}:${toStr(remMin)}:${toStr(remSec)}`);
     // totalSeconds--;
@@ -166,7 +159,7 @@ const Timer_api = (props) => {
 };
 
 
-export default Timer_api;
+export default TimerApi;
 
 
 

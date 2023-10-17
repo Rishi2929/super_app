@@ -15,7 +15,7 @@ function Widget({imageSrc,color,genre,onClick,selected}) {
     <div>
         <div className='movie_tile' style={widgetStyle} onClick={onClick}>
           <p className='text'>{genre}</p>
-            <img src={imageSrc}></img>
+            <img src={imageSrc} alt='image'></img>
 
         </div>
     </div>

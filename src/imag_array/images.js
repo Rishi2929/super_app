@@ -15,10 +15,7 @@ import img14 from '../assets/Vector (2).png';
 import img15 from '../assets/Vector (3).png';
 import img16 from '../assets/img15.png';
 
-
-
-
-export default {
+const images = {
     img1,
     img2,
     img3,
@@ -36,3 +33,5 @@ export default {
     img15,
     img16
 };
+
+export default images;
