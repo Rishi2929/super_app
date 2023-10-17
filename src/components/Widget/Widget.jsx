@@ -1,6 +1,6 @@
 import React from 'react'
 import './Widget.scss'
-import images from '../../imag_array/images'
+
 
 
 function Widget({imageSrc,color,genre,onClick,selected}) {
