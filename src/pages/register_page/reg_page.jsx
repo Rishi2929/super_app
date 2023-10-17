@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import images from "../../imag_array/images"
 import "./reg_page.scss";
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -36,13 +36,13 @@ function RegisterPage() {
 
 
   const [isChecked, setIsChecked] = useState(false);
-  const [inputErrors, setInputErrors] = useState({
-    Name: "",
-    UserName: "",
-    Email: "",
-    Mobile: "",
-    check: "",
-  });
+  // const [inputErrors, setInputErrors] = useState({
+  //   Name: "",
+  //   UserName: "",
+  //   Email: "",
+  //   Mobile: "",
+  //   check: "",
+  // });
 
   const handleCheckboxChange = (e) => {
     setIsChecked(e.target.checked);
@@ -114,7 +114,7 @@ function RegisterPage() {
   return (
     <div className="Reg_cont">
       <div>
-        <img src={images.img1} className="left-aligned-image" />
+        <img src={images.img1} className="left-aligned-image" alt="" />
         <h1 className="Left_header">Discover new things on </h1>
         <h1 className="left_header_bottom">Superapp</h1>
       </div>

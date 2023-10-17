@@ -2,17 +2,13 @@ import React, { useState, useEffect } from "react";
 import "./profilepage.scss";
 
 import images from "../../imag_array/images";
-import Weather_Api from "../../components/weather_api/weather_api";
-import Time_Api from "../../components/TimerComp/Time_api";
-import News_api from "../../components/news_api/News_api";
-import { useLocation, useNavigate } from "react-router-dom";
-import TimerComp from "../../components/TimerComp/Time_api";
-import Timer from "../../components/TimerComp/Time_api";
-import Timer_api from "../../components/TimerComp/Time_api";
+import { useNavigate } from "react-router-dom";
+import WeatherApi from "../../components/weather_api/WeatherApi";
+import TimerApi from "../../components/TimerComp/TimeApi";
+import NewsApi from "../../components/news_api/NewsApi";
 
 function ProfilePage() {
   const navigate = useNavigate();
-  const location = useLocation();
 
   const directToEntertianPage = () => {
     navigate("/entertainment");
@@ -51,7 +47,7 @@ function ProfilePage() {
     if (savedGenres) {
       setSelectedGenres(JSON.parse(savedGenres));
     }
-  }, []);
+  }, [selectedGenres]);
   const now = new Date();
 
   const year = now.getFullYear();
@@ -85,7 +81,7 @@ function ProfilePage() {
           <div className="flex">
             <div className="profile-weather">
               <div className="Profile_card">
-                <img src={images.img11}></img>
+                <img src={images.img11} alt=""/>
                 {/* Entire user details(user name email username and genres) */}
                 <div className="user_card">
                   {/* User Details which will be displayed from localStorage */}
@@ -113,7 +109,7 @@ function ProfilePage() {
                     </p>
                   </div>
                 </div>
-                <Weather_Api />
+                <WeatherApi />
               </div>
             </div>
             <div className="note-box">
@@ -125,14 +121,14 @@ function ProfilePage() {
             </div>
           </div>
           <div className="time-cont">
-            <Timer_api />
+            <TimerApi />
           </div>
         </div>
 
         <div className="news_card">
           <div className="transparent_cont"></div>
           <div className="bottom_cont">
-            <News_api />
+            <NewsApi />
           </div>
         </div>
       </div>

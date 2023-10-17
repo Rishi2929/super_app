@@ -4,7 +4,7 @@ import images from '../../imag_array/images'
 import { useNavigate } from 'react-router-dom'
 import MoviesApi from '../../components/moviesApi/movies_api';
 
-function Entertain_page() {
+function EntertainPage() {
 
   const navigate= useNavigate();
   const handleButtonClickToProfilePage=()=>{
@@ -14,7 +14,7 @@ function Entertain_page() {
     <div className='entertainment-cont'>
       <div className='img_btn'>
       <h1>Super app</h1>
-      <img src={images.img16} onClick={handleButtonClickToProfilePage}></img>
+      <img src={images.img16} onClick={handleButtonClickToProfilePage} alt=''/>
       </div>
       <MoviesApi/>
 
@@ -22,4 +22,4 @@ function Entertain_page() {
   )
 }
 
-export default Entertain_page
+export default EntertainPage

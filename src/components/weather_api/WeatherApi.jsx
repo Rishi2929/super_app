@@ -3,7 +3,7 @@ import './weather_api.scss'
 import images from '../../imag_array/images'
 
 
-const Weather_Api = () => {
+const WeatherApi = () => {
   const [weatherData, setWeatherData] = useState(null);
   const apiKey = 'baa0d173f09b4e6ab8e141436230910';
   const apiUrl = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=auto:ip&aqi=no`;
@@ -77,4 +77,4 @@ const Weather_Api = () => {
   );
 };
 
-export default Weather_Api;
+export default WeatherApi;

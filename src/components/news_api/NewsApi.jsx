@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import './News_api.scss';
 
 const NewsApi = () => {
@@ -9,7 +9,7 @@ const NewsApi = () => {
   const apiUrl = `https://newsapi.org/v2/top-headlines?country=us&-news&apiKey=${apiKey}`;
 
 
-  const fetchData = async () => {
+  const fetchData = useCallback(async () => {
     try {
       const response = await fetch(apiUrl);
       if (!response.ok) {
@@ -21,13 +21,14 @@ const NewsApi = () => {
     } catch (error) {
       console.error('Error fetching news data:', error);
     }
-  };
+  }, [apiUrl]);
 
 
 
   useEffect(() => {
     fetchData();
   }, [fetchData]);
+
 
 
   // console.log(newsData)
