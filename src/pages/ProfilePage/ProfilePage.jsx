@@ -33,15 +33,6 @@ function ProfilePage() {
   }, [selectedGenres]);
 
 
-  // console.log("userData: ", userData);
-// console.log(selectedGenres)
-  // useEffect(() => {
-  //   const savedGenres = localStorage.getItem("selectedGenres");
-  //   if (savedGenres) {
-  //     setSelectedGenres(JSON.parse(savedGenres));
-  //   }
-  // }, []);
-
   useEffect(() => {
     const savedGenres = localStorage.getItem("selectedGenres");
     if (savedGenres) {

@@ -27,6 +27,7 @@ const WeatherApi = () => {
 
   }, [apiUrl]);
 
+
   return (
     <div>
       {weatherData ? (
