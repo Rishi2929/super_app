@@ -22,40 +22,42 @@ const YourComponent = () => {
         },
       };
 
-      const response = await fetch(`https://api.themoviedb.org/3/movie/popular?language=en-US&page=${page}`, options);
+      const response = await fetch(`https://api.themoviedb.org/3/movie/popular?language=en-US&page=120`, options);
       const data = await response.json();
-      return data.results;
+      setMovieData(data.results); // Set the data as it is without filtering
     } catch (error) {
       console.error(error);
     }
   };
+  fetchData();
 
-  useEffect(() => {
-    async function fetchDataAsync() {
-      const data1 = await fetchData(4);
-      const data2 = await fetchData(100);
-      const data3 = await fetchData(110);
-      const data4 = await fetchData(120);
-      const data5 = await fetchData(130);
-      const data6 = await fetchData(140);
-      const data7 = await fetchData(148);
-      const data8 = await fetchData(160);
 
-      const mergedData = [
-        ...data1,
-        ...data2,
-        ...data3,
-        ...data4,
-        ...data5,
-        ...data6,
-        ...data7,
-        ...data8,
-      ];
+  // useEffect(() => {
+  //   async function fetchDataAsync() {
+  //     const data1 = await fetchData(4);
+  //     const data2 = await fetchData(100);
+  //     const data3 = await fetchData(110);
+  //     const data4 = await fetchData(120);
+  //     const data5 = await fetchData(130);
+  //     const data6 = await fetchData(140);
+  //     const data7 = await fetchData(148);
+  //     const data8 = await fetchData(160);
 
-      setMovieData(mergedData);
-    }
-    fetchDataAsync();
-  }, []);
+  //     const mergedData = [
+  //       ...data1,
+  //       ...data2,
+  //       ...data3,
+  //       ...data4,
+  //       ...data5,
+  //       ...data6,
+  //       ...data7,
+  //       ...data8,
+  //     ];
+
+  //     setMovieData(mergedData);
+  //   }
+  //   fetchDataAsync();
+  // }, []);
 
   
   const FilteredMoviesbyAction = () => {
@@ -68,7 +70,7 @@ const YourComponent = () => {
             <ul>
               {movieData
                 ?.filter((movie) => movie.genre_ids.includes(28))
-                .slice(4, 8) // Limits the display to the first four movies
+                .slice(0, 4) // Limits the display to the first four movies
                 .map((movie) => (
                   <div key={movie.id}>
                     <div className='movie_data'>
@@ -131,7 +133,7 @@ const YourComponent = () => {
             <ul>
               {movieData
                 ?.filter((movie) => movie.genre_ids.includes(10749))
-                .slice(5, 9) // Limits the display to the first four movies
+                .slice(0, 4) // Limits the display to the first four movies
                 .map((movie) => (
                   <div key={movie.id}>
                     <div className='movie_data'>
